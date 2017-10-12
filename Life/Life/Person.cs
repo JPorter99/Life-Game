@@ -10,6 +10,7 @@ namespace Life
     {
         public string Name { get;}
         public int Age { get; set; }
+        public Bank myBank { get; set; }
         
         public Person(string inpName)
         {

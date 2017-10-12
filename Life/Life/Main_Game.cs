@@ -29,11 +29,13 @@ namespace Life
 
         private void Main_Game_Load(object sender, EventArgs e)
         {
-           
+            startupUI();
             updateUI();
             timer1.Start();
+            MsgBoxCheckTimer.Start();
         }
 
+        //MAIN TIMER 
         private void updateUI()
         {
             label1.Text = CurrentGame.GameTime.currentGameTime.ToLongDateString();
@@ -48,7 +50,7 @@ namespace Life
                 this.Enabled = false;
                 x05timeSpeed();
             }
-
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -155,5 +157,22 @@ namespace Life
 
         }
 
+        public void startupUI()
+        {
+            panel1.Hide();
+            panel3.Hide();
+            panel4.Hide();
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MsgBoxCheckTimer_Tick(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
