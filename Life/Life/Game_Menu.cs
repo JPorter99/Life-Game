@@ -32,7 +32,7 @@ namespace Life
             this.Close();
             Main.WindowState = FormWindowState.Minimized;
             Main.WindowState = FormWindowState.Normal;
-            GameATM.Status = "Active";
+            GameATM.Status = Game.GameState.Active;
             
         }
 
