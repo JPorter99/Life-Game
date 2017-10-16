@@ -45,6 +45,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -62,17 +66,32 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.MsgBoxCheckTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label16 = new System.Windows.Forms.Label();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.label17 = new System.Windows.Forms.Label();
+            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.label19 = new System.Windows.Forms.Label();
+            this.progressBar4 = new System.Windows.Forms.ProgressBar();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.progressBar5 = new System.Windows.Forms.ProgressBar();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -244,6 +263,48 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Bank";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(60, 77);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(315, 25);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "You don\'t currently own an account";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(138, 106);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(157, 43);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Join a bank";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Location = new System.Drawing.Point(14, 170);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(148, 93);
+            this.panel4.TabIndex = 14;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label18.Location = new System.Drawing.Point(3, 3);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(142, 22);
+            this.label18.TabIndex = 10;
+            this.label18.Text = "Account Options";
             // 
             // panel3
             // 
@@ -426,52 +487,183 @@
             // 
             this.MsgBoxCheckTimer.Tick += new System.EventHandler(this.MsgBoxCheckTimer_Tick);
             // 
-            // panel4
+            // panel5
             // 
-            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Controls.Add(this.label18);
-            this.panel4.Location = new System.Drawing.Point(14, 170);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(148, 93);
-            this.panel4.TabIndex = 14;
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.label22);
+            this.panel5.Controls.Add(this.label21);
+            this.panel5.Controls.Add(this.label20);
+            this.panel5.Controls.Add(this.progressBar4);
+            this.panel5.Controls.Add(this.label19);
+            this.panel5.Controls.Add(this.progressBar3);
+            this.panel5.Controls.Add(this.label17);
+            this.panel5.Controls.Add(this.progressBar2);
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Controls.Add(this.progressBar1);
+            this.panel5.Location = new System.Drawing.Point(462, 95);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(204, 174);
+            this.panel5.TabIndex = 6;
             // 
-            // label18
+            // progressBar1
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label18.Location = new System.Drawing.Point(3, 3);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(142, 22);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "Account Options";
+            this.progressBar1.Location = new System.Drawing.Point(13, 10);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(136, 19);
+            this.progressBar1.TabIndex = 0;
             // 
-            // button3
+            // label16
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(138, 106);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 43);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Join a bank";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(151, 12);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(43, 15);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Health";
             // 
-            // label15
+            // progressBar2
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(60, 77);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(315, 25);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "You don\'t currently own an account";
+            this.progressBar2.Location = new System.Drawing.Point(13, 42);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(106, 16);
+            this.progressBar2.TabIndex = 2;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Location = new System.Drawing.Point(151, 45);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(42, 13);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Hunger";
+            // 
+            // progressBar3
+            // 
+            this.progressBar3.Location = new System.Drawing.Point(13, 64);
+            this.progressBar3.Name = "progressBar3";
+            this.progressBar3.Size = new System.Drawing.Size(106, 16);
+            this.progressBar3.TabIndex = 4;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Location = new System.Drawing.Point(159, 67);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(34, 13);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Sleep";
+            // 
+            // progressBar4
+            // 
+            this.progressBar4.Location = new System.Drawing.Point(13, 86);
+            this.progressBar4.Name = "progressBar4";
+            this.progressBar4.Size = new System.Drawing.Size(106, 16);
+            this.progressBar4.TabIndex = 6;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Location = new System.Drawing.Point(136, 90);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(57, 13);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Happiness";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(7, 122);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(112, 31);
+            this.label21.TabIndex = 8;
+            this.label21.Text = "£100.00";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Location = new System.Drawing.Point(10, 148);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(31, 13);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Cash";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.label26);
+            this.panel6.Controls.Add(this.label25);
+            this.panel6.Controls.Add(this.label24);
+            this.panel6.Controls.Add(this.label23);
+            this.panel6.Controls.Add(this.progressBar5);
+            this.panel6.Location = new System.Drawing.Point(462, 275);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(204, 97);
+            this.panel6.TabIndex = 7;
+            // 
+            // progressBar5
+            // 
+            this.progressBar5.Location = new System.Drawing.Point(13, 45);
+            this.progressBar5.Name = "progressBar5";
+            this.progressBar5.Size = new System.Drawing.Size(180, 19);
+            this.progressBar5.TabIndex = 10;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Location = new System.Drawing.Point(10, 9);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(57, 13);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "Currently...";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(10, 20);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(54, 20);
+            this.label24.TabIndex = 11;
+            this.label24.Text = "Action";
+            // 
+            // label25
+            // 
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(33, 66);
+            this.label25.Name = "label25";
+            this.label25.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label25.Size = new System.Drawing.Size(47, 17);
+            this.label25.TabIndex = 12;
+            this.label25.Text = "X";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(77, 66);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(117, 17);
+            this.label26.TabIndex = 13;
+            this.label26.Text = "Hours Remaining";
             // 
             // Main_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(675, 389);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel2);
             this.Name = "Main_Game";
@@ -485,12 +677,16 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -534,5 +730,22 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ProgressBar progressBar4;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ProgressBar progressBar3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ProgressBar progressBar5;
     }
 }

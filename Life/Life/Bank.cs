@@ -10,6 +10,17 @@ namespace Life
     {
         public string Name { get; set; }
         public BankBalance b01 {get; set;}
+        public void GenerateFeatures()
+        {
+               
+        }
 
+        public void RandomColour()
+        {
+
+        }
     }
+
+    
+
 }
