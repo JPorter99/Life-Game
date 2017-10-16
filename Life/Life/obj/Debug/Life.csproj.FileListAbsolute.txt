@@ -9,3 +9,4 @@ C:\Users\jporter\Documents\C# Training\Fundamentals to C#\Life\Life\obj\Debug\Li
 C:\Users\jporter\Documents\C# Training\Fundamentals to C#\Life\Life\obj\Debug\Life.exe
 C:\Users\jporter\Documents\C# Training\Fundamentals to C#\Life\Life\obj\Debug\Life.pdb
 C:\Users\jporter\Documents\C# Training\Fundamentals to C#\Life\Life\obj\Debug\Life.Game_Menu.resources
+C:\Users\jporter\Documents\C# Training\Fundamentals to C#\Life\Life\obj\Debug\Life.bankReg.resources
