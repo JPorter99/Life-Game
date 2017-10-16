@@ -12,6 +12,12 @@ namespace Life
         public int Age { get; set; }
         public Bank myBank { get; set; }
         
+        public Action currentAction { get; set; }
+
+        public int Health { get;}
+        public int Hunger { get; set; }
+        public int Sleep { get; set;  }
+        public int Happiness { get; set; }
         public Person(string inpName)
         {
             Name = inpName;
@@ -21,5 +27,6 @@ namespace Life
         {
             Joe, Adam, Peter, Phil, Jim, John
         }
+
     }
 }

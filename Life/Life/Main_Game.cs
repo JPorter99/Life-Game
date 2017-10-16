@@ -42,15 +42,51 @@ namespace Life
             label2.Text = CurrentGame.GameTime.currentGameTime.ToShortTimeString();
             label3.Text = CurrentGame.Player.Name;
 
-            if (CurrentGame.Status == "Active")
+            if (CurrentGame.Status == Game.GameState.Active)
             {
                 this.Enabled = true;
-            } else if (CurrentGame.Status == "Paused")
+            } else if (CurrentGame.Status == Game.GameState.Paused || CurrentGame.Status == Game.GameState.BankReg)
             {
                 this.Enabled = false;
                 x05timeSpeed();
             }
             
+            
+            changeBankUI();
+            
+        }
+
+        private void changeBankUI()
+        {
+            //Checks Bank UI
+            if (CurrentGame.Player.myBank == null)
+            {
+                panel1.Hide();
+                panel3.Hide();
+                panel4.Hide();
+                button3.Show();
+                label15.Show();
+            }
+            else
+            {
+                panel1.Show();
+                panel3.Show();
+                panel4.Show();
+                button3.Hide();
+                label15.Hide();
+                label10.Text = CurrentGame.Player.myBank.Name;
+                panel1.BackColor = Color.FromArgb(CurrentGame.Player.myBank.ColourRGB[0], CurrentGame.Player.myBank.ColourRGB[1], CurrentGame.Player.myBank.ColourRGB[2]);
+            }
+
+
+            if (panel1.BackColor.GetBrightness() > 0.4)
+            {
+                setBankColour(Color.Black);
+            }
+            else
+            {
+                setBankColour(Color.White);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -81,9 +117,9 @@ namespace Life
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (CurrentGame.Status == "Active")
+            if (CurrentGame.Status == Game.GameState.Active)
             {
-                CurrentGame.Status = "Paused";
+                CurrentGame.Status = Game.GameState.Paused;
                 Game_Menu MenuForm = new Game_Menu(CurrentGame, timer1.Interval,this);
                 MenuForm.Show();
             }
@@ -133,7 +169,7 @@ namespace Life
 
         private void Main_Game_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (CurrentGame.Status == "Paused") {
+            if (CurrentGame.Status == Game.GameState.Paused) {
 
             }
             else
@@ -162,7 +198,10 @@ namespace Life
             panel1.Hide();
             panel3.Hide();
             panel4.Hide();
-
+            progressBar1.Value = 100;
+            progressBar2.Value = 100;
+            progressBar3.Value = 100;
+            progressBar4.Value = 100;
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -177,8 +216,40 @@ namespace Life
 
         private void button3_Click(object sender, EventArgs e)
         {
-            bankReg currentBankReg = new bankReg();
+            bankReg currentBankReg = new bankReg(CurrentGame, this);
+            CurrentGame.Status = Game.GameState.BankReg;
             currentBankReg.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void setBankColour(Color Colour)
+        {
+            label5.ForeColor = Colour;
+                label9.ForeColor = Colour;
+            label10.ForeColor = Colour;
+            label6.ForeColor = Colour;
+            label7.ForeColor = Colour;
+            label8.ForeColor = Colour;
+            radioButton1.ForeColor = Colour;
+            radioButton2.ForeColor = Colour;
+        }
+
+   
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to close your account with " + CurrentGame.Player.myBank.Name + "? \nThe remainder of your account will be withdrawn", "Leaving Bank", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+
+                CurrentGame.Player.myBank = null;
+            }
+            else
+            {
+                
+            }
+            
         }
     }
 }

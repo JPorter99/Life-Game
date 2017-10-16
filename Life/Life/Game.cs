@@ -11,7 +11,7 @@ namespace Life
         public Bank currentBank { get; set; }
         public Time GameTime { get; set; }
         public Person Player { get; set; }
-        public String Status { get; set; } = "Active";
+        public GameState Status { get; set; } = GameState.Active;
         public Game(int Age, String Name)
         {
             Player = new Person(Name);
@@ -20,7 +20,12 @@ namespace Life
         }
 
         
-
+        public enum GameState
+        {
+            Active,
+            Paused,
+            BankReg
+        }
     }
 
 }
