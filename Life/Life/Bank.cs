@@ -9,7 +9,8 @@ namespace Life
     public class Bank
     {
         public string Name { get; set; }
-        public BankBalance b01 {get; set;}
+        public double balance { get; set; } = 0;
+        public double interest { get; set; }
 
         public int[] ColourRGB { get; set; } = new int[3];
         public void GenerateFeatures()
@@ -21,17 +22,34 @@ namespace Life
             ColourRGB[0] = r.Next(0, 256);
             ColourRGB[1] = r.Next(0, 256);
             ColourRGB[2] = r.Next(0, 256);
+
+            interest = r.Next(1, 10);
         } 
-
-        public void RandomColour()
-        {
-
-        }
 
         public Bank()
         {
             GenerateFeatures();
 
+        }
+
+        public void Transaction(TransactType Type, double amount, Game CURRENTgame)
+        {
+            if (Type == TransactType.Withdraw)
+            {
+                balance -= amount;
+                CURRENTgame.Player.Cash += amount;
+            } else if (Type == TransactType.Deposit)
+            {
+                balance += amount;
+                CURRENTgame.Player.Cash -= amount;
+            }
+
+        }
+
+        public enum TransactType
+        {
+            Withdraw,
+            Deposit
         }
     }
 

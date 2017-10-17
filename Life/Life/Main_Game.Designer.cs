@@ -44,16 +44,19 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label28 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -83,13 +86,14 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.progressBar5 = new System.Windows.Forms.ProgressBar();
-            this.button4 = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -243,6 +247,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label29);
+            this.tabPage2.Controls.Add(this.label28);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -251,12 +257,23 @@
             this.tabPage2.Text = "Profile";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(100, 72);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(62, 31);
+            this.label28.TabIndex = 10;
+            this.label28.Text = "Age";
+            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.panel3);
             this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.panel4);
-            this.tabPage3.Controls.Add(this.panel3);
             this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -264,6 +281,72 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Bank";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label27);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(11, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(152, 160);
+            this.panel3.TabIndex = 10;
+            this.panel3.TabStop = false;
+            this.panel3.Text = "Account Details";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label11.Location = new System.Drawing.Point(6, 74);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(50, 25);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "%%";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label27.Location = new System.Drawing.Point(6, 34);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(140, 20);
+            this.label27.TabIndex = 14;
+            this.label27.Text = "Current Account";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 113);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(100, 13);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Next Quarterly Date";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 60);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(68, 13);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Interest Rate";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 21);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(31, 13);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Type";
             // 
             // label15
             // 
@@ -296,6 +379,16 @@
             this.panel4.Size = new System.Drawing.Size(148, 93);
             this.panel4.TabIndex = 14;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(27, 55);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(90, 21);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Leave Bank";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -307,58 +400,6 @@
             this.label18.Size = new System.Drawing.Size(142, 22);
             this.label18.TabIndex = 10;
             this.label18.Text = "Account Options";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Location = new System.Drawing.Point(14, 10);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(148, 154);
-            this.panel3.TabIndex = 10;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(5, 108);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 13);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "Annual Date";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 30);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 13);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Type";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(5, 76);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 13);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Interest Rate";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label11.Location = new System.Drawing.Point(6, 5);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 22);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Account Details";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // panel1
             // 
@@ -660,15 +701,16 @@
             this.progressBar5.Size = new System.Drawing.Size(180, 19);
             this.progressBar5.TabIndex = 10;
             // 
-            // button4
+            // label29
             // 
-            this.button4.Location = new System.Drawing.Point(27, 55);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(90, 21);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Leave Bank";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.label29.AutoSize = true;
+            this.label29.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(100, 103);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(73, 31);
+            this.label29.TabIndex = 11;
+            this.label29.Text = "DOB";
             // 
             // Main_Game
             // 
@@ -688,12 +730,14 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -733,8 +777,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -761,5 +803,10 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ProgressBar progressBar5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox panel3;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
     }
 }

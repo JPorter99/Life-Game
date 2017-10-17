@@ -28,7 +28,7 @@ namespace Life
         private void startNewGame(string gameType){
             if (gameType == "Custom")
             {
-                Main_Game NewGameForm = new Main_Game(textBox1.Text, Convert.ToInt16(textBox2.Text));
+                Main_Game NewGameForm = new Main_Game(textBox1.Text, dateTimePicker1.Value.Date);
                 NewGameForm.Show();
             } else
             {
@@ -63,6 +63,13 @@ namespace Life
                 MessageBox.Show(Image.SafeFileName);
 
             }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime DOB = dateTimePicker1.Value.Date;
+            label5.Text = Convert.ToString(DateTime.Now.Subtract(DOB).TotalDays);
+
         }
     }
 }

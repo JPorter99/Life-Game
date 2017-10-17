@@ -9,8 +9,11 @@ namespace Life
     public class Person
     {
         public string Name { get;}
-        public int Age { get; set; }
+        public DateTime DOB { get; set; }
         public Bank myBank { get; set; }
+        public double Cash { get; set; } = 100;
+
+  
         
         public Action currentAction { get; set; }
 
@@ -18,9 +21,22 @@ namespace Life
         public int Hunger { get; set; }
         public int Sleep { get; set;  }
         public int Happiness { get; set; }
-        public Person(string inpName)
+        public Person(string inpName, DateTime dob)
         {
             Name = inpName;
+            DOB = dob;
+        }
+
+        public int calculateAge(Time GameTime)
+        {
+            if (GameTime.currentGameTime.DayOfYear < DOB.DayOfYear)
+            {
+                return (GameTime.currentGameTime.Year - DOB.Year) - 1;
+            }
+            else
+            {
+                return (GameTime.currentGameTime.Year - DOB.Year);
+            }
         }
 
         private enum Names
