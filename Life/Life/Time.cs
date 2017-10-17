@@ -9,16 +9,18 @@ namespace Life
     public class Time
     {
         public DateTime currentGameTime { get; set; }
+        public DateTime startDate { get; set; }
         public int gameSpeed { get; set; } = 1;
-        public Time(int Age)
+        public Time(DateTime DOB)
         {
-            currentGameTime = generateTime(Age);
+            currentGameTime = generateTime(DOB);
+            startDate = currentGameTime;
         }
 
-        private DateTime generateTime(int age) //Change this to timespan eventually?
+        private DateTime generateTime(DateTime DOB) //Change this to timespan eventually?
         {
             Random rnd = new Random();
-            return DateTime.Now.AddDays(0 - rnd.Next(0,age * 365));
+            return DateTime.Now.AddDays(0 - rnd.Next(0,(Convert.ToInt32(DateTime.Now.Subtract(DOB).TotalDays)))); //FIX THIS
 
         }
 

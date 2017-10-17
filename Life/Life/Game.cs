@@ -12,10 +12,10 @@ namespace Life
         public Time GameTime { get; set; }
         public Person Player { get; set; }
         public GameState Status { get; set; } = GameState.Active;
-        public Game(int Age, String Name)
+        public Game(DateTime DOB, String Name)
         {
-            Player = new Person(Name);
-            GameTime = new Time(Age);
+            Player = new Person(Name, DOB);
+            GameTime = new Time(DOB);
          
         }
 

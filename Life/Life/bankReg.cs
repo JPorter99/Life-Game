@@ -52,9 +52,13 @@ namespace Life
             panel3.BackColor = Color.FromArgb(bank03.ColourRGB[0], bank03.ColourRGB[1], bank03.ColourRGB[2]);
 
             label1.Text = bank01.Name;
+            label4.Text = Convert.ToString(bank01.interest) + "% quarterly";
             label2.Text = bank02.Name;
+            label5.Text = Convert.ToString(bank02.interest) + "% quarterly";
             label3.Text = bank03.Name;
-            
+            label6.Text = Convert.ToString(bank03.interest) + "% quarterly";
+
+
 
 
 

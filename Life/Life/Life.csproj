@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Action.cs" />
     <Compile Include="Bank.cs" />
-    <Compile Include="BankBalance.cs" />
     <Compile Include="bankReg.cs">
       <SubType>Form</SubType>
     </Compile>
