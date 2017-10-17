@@ -84,6 +84,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Game_Menu";
             this.Text = "Game_Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_Menu_FormClosing);
             this.Load += new System.EventHandler(this.Game_Menu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -8,7 +8,6 @@ namespace Life
 {
     public class Game
     {
-        public Bank currentBank { get; set; }
         public Time GameTime { get; set; }
         public Person Player { get; set; }
         public GameState Status { get; set; } = GameState.Active;

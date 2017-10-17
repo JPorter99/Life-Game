@@ -68,7 +68,6 @@ namespace Life
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             DateTime DOB = dateTimePicker1.Value.Date;
-            label5.Text = Convert.ToString(DateTime.Now.Subtract(DOB).TotalDays);
 
         }
     }

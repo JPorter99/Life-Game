@@ -75,18 +75,24 @@ namespace Life
         private void button1_Click(object sender, EventArgs e)
         {
             currentGame.Player.myBank = bank01;
+            currentGame.Player.myBank.startDate = currentGame.GameTime.currentGameTime.Date;
+            currentGame.Player.myBank.nextInterestDate = currentGame.Player.myBank.calculateNextInterestDate();
             this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             currentGame.Player.myBank = bank02;
+            currentGame.Player.myBank.startDate = currentGame.GameTime.currentGameTime.Date;
+            currentGame.Player.myBank.nextInterestDate = currentGame.Player.myBank.calculateNextInterestDate();
             this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             currentGame.Player.myBank = bank03;
+            currentGame.Player.myBank.startDate = currentGame.GameTime.currentGameTime.Date;
+            currentGame.Player.myBank.nextInterestDate = currentGame.Player.myBank.calculateNextInterestDate();
             this.Close();
             
         }

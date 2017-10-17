@@ -13,6 +13,7 @@ namespace Life
     public partial class Main_Game : Form
     {
         Game CurrentGame { get; set; }
+        private bool placer = false;
         public Main_Game(string ParseName, DateTime DOB) //TEMPORARY UNTIL PERSON CLASS BECOMES AVAILABLE
         {
 
@@ -81,9 +82,19 @@ namespace Life
                 panel1.BackColor = Color.FromArgb(CurrentGame.Player.myBank.ColourRGB[0], CurrentGame.Player.myBank.ColourRGB[1], CurrentGame.Player.myBank.ColourRGB[2]);
                 label11.Text = Convert.ToString(CurrentGame.Player.myBank.interest) + "%";
                 label6.Text = Convert.ToString(String.Format("{0:C}",CurrentGame.Player.myBank.balance));
+                label30.Text = CurrentGame.Player.myBank.nextInterestDate.ToLongDateString();
+
+                
+                if (CurrentGame.Player.myBank.nextInterestDate.Date == CurrentGame.GameTime.currentGameTime.Date)
+                {
+                    CurrentGame.Player.myBank.applyInterest();
+                } else
+                {
+                }
 
             }
 
+            
 
             if (panel1.BackColor.GetBrightness() > 0.4)
             {
@@ -262,7 +273,7 @@ namespace Life
         {
             if (MessageBox.Show("Are you sure you want to close your account with " + CurrentGame.Player.myBank.Name + "? \nThe remainder of your account will be withdrawn", "Leaving Bank", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-
+                CurrentGame.Player.myBank.Transaction(Bank.TransactType.Withdraw, CurrentGame.Player.myBank.balance, CurrentGame);
                 CurrentGame.Player.myBank = null;
             }
             else
@@ -271,5 +282,6 @@ namespace Life
             }
             
         }
+
     }
 }
