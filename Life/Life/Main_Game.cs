@@ -13,7 +13,6 @@ namespace Life
     public partial class Main_Game : Form
     {
         Game CurrentGame { get; set; }
-        private bool placer = false;
         public Main_Game(string ParseName, DateTime DOB) //TEMPORARY UNTIL PERSON CLASS BECOMES AVAILABLE
         {
 

@@ -51,7 +51,7 @@ namespace Life
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            panel2.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -69,6 +69,11 @@ namespace Life
         {
             DateTime DOB = dateTimePicker1.Value.Date;
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel2.Show();
         }
     }
 }
