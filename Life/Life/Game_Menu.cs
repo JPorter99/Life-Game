@@ -30,10 +30,6 @@ namespace Life
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Main.WindowState = FormWindowState.Minimized;
-            Main.WindowState = FormWindowState.Normal;
-            GameATM.Status = Game.GameState.Active;
-            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -46,7 +42,14 @@ namespace Life
                 Main.Close();
             }
             
-        } 
         }
+
+        private void Game_Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Main.WindowState = FormWindowState.Minimized;
+            Main.WindowState = FormWindowState.Normal;
+            GameATM.Status = Game.GameState.Active;
+        }
+    }
     }
 

@@ -12,6 +12,10 @@ namespace Life
         public double balance { get; set; } = 0;
         public double interest { get; set; }
 
+        public DateTime startDate { get; set; }
+
+       public DateTime nextInterestDate { get; set; }
+
         public int[] ColourRGB { get; set; } = new int[3];
         public void GenerateFeatures()
         {
@@ -29,20 +33,48 @@ namespace Life
         public Bank()
         {
             GenerateFeatures();
-
+           
         }
 
         public void Transaction(TransactType Type, double amount, Game CURRENTgame)
         {
             if (Type == TransactType.Withdraw)
             {
-                balance -= amount;
-                CURRENTgame.Player.Cash += amount;
+                if (balance - amount >= 0) {
+                    balance -= amount;
+                    CURRENTgame.Player.Cash += amount;
+                } else
+                {
+                 //FIND A WAY TO SHOW A MESSAGEBOX   
+                }
+                
             } else if (Type == TransactType.Deposit)
             {
-                balance += amount;
-                CURRENTgame.Player.Cash -= amount;
+                if (CURRENTgame.Player.Cash - amount >= 0)
+                {
+                    balance += amount;
+                    CURRENTgame.Player.Cash -= amount;
+                } else
+                {
+                    //FIND A WAY TO SHOW A MESSAGEBOX   
+                }
+
             }
+
+        }
+
+        public DateTime calculateNextInterestDate()
+        {
+            DateTime Placeholder = new DateTime();
+            if (nextInterestDate == Placeholder)
+            {
+                return startDate.AddMonths(3);
+
+            } else
+            {
+                return nextInterestDate.AddMonths(3);
+            }
+            
 
         }
 
@@ -50,6 +82,12 @@ namespace Life
         {
             Withdraw,
             Deposit
+        }
+
+        public void applyInterest()
+        {
+            balance *= (1 + (interest / 100));
+            nextInterestDate = calculateNextInterestDate();
         }
     }
 
